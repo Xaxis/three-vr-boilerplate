@@ -1,7 +1,5 @@
 # three-vr-boilerplate
 
-Version 1.0.0
-
 ## Summary
 
 Scaffolding for rapidly building Three.js/WebVR based applications.
@@ -23,6 +21,7 @@ Wil Neeley ( [@wilneeley](http://twitter.com/wilneeley) / [github.com](https://g
 ## Getting started
 
 1. Clone the repo into your target project directory and copy files accordingly.
-2. Make sure you have node and npm installed.
-3. From your project root run `npm install` to install dependencies.
-6. From your terminal in your project root run `grunt` to initialize SASS/JS file watcher.
+2. Make sure you have npm and bower installed.
+3. From your project root run `npm install` to install npm dependencies.
+4. From your project root run `bower install webvr-boilerplate` to install webvr-boilerplate.
+5. From your terminal in your project root run `grunt` to initialize SASS/JS file watcher.
