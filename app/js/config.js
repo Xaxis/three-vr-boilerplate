@@ -32,20 +32,17 @@
       main:                 'libs/native/Main/Main'
     },
     shim: {
-      'vr-polyfill': {
-        deps: ['three']
-      },
       'vr-controls': {
         deps: ['three']
       },
       'vr-effect': {
         deps: ['three']
       },
-      'vr-manager': {
+      'vr-polyfill': {
         deps: ['three']
       },
-      'three': {
-        deps: []
+      'vr-manager': {
+        deps: ['three']
       }
     }
   });

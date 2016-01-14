@@ -7,9 +7,9 @@ define([
   'axes',
   'promise-polyfill',
   'three',
-  'vr-polyfill',
   'vr-controls',
   'vr-effect',
+  'vr-polyfill',
   'vr-manager'
 ], function(_, $, Axes) {
   var Main = function() {
@@ -65,7 +65,9 @@ define([
         // Create GL renderer, camera, and scene
         this.scene = new THREE.Scene();
         this.camera = new THREE.PerspectiveCamera(view_angle, aspect, near, far);
-        this.renderer = new THREE.WebGLRenderer({ antialias: true });
+        this.renderer = new THREE.WebGLRenderer({
+          antialias: true
+        });
 
         // Set renderer pixel ratio
         this.renderer.setPixelRatio(window.devicePixelRatio);
@@ -74,13 +76,13 @@ define([
         this.renderer.setClearColor(0x000000, 1);
 
         // Append element to DOM
-        $('body').append(this.renderer.domElement);
+        document.body.appendChild(this.renderer.domElement);
 
         // Initialize renderer
         this.renderer.setSize(win_w, win_h);
 
         // Initialize camera position
-        this.camera.position.set(0, 0, 4);
+        this.camera.position.set(0, 0, 50);
         this.camera.lookAt(new THREE.Vector3(0, 0, 0));
 
         // Apply VR headset positional data to camera.
