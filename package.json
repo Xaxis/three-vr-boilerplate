@@ -1,11 +1,10 @@
 {
   "name": "three-vr-boilerplate",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Scaffolding for rapidly building Three.js/WebVR based applications.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -20,7 +19,6 @@
   "dependencies": {
     "backbone": "^1.2.1",
     "jquery": "^2.1.4",
-    "lodash": "^3.10.0",
     "modernizr": "^3.0.0-alpha.4",
     "requirejs": "^2.1.19",
     "requirejs-text": "^2.0.12",

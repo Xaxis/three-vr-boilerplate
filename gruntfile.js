@@ -96,7 +96,7 @@ module.exports = function(grunt) {
         }
       },
       sass: {
-        files: 'app/assets/sass/*.{scss,sass}',
+        files: 'app/assets/sass/**/*.{scss,sass}',
         tasks: ['sass:dev']
       }
     }

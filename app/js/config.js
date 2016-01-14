@@ -10,16 +10,43 @@
     baseUrl: 'js',
     paths: {
 
-      // Vendor dependencies
-      jquery:               'libs/vendor/jquery/dist/jquery.min',
-      text:                 'libs/vendor/requirejs-text/text',
-      underscore:           'libs/vendor/underscore/underscore',
-      backbone:             'libs/vendor/backbone/backbone',
+      // Vendor
+      jquery:               'libs/vendor/npm/jquery/dist/jquery.min',
+      text:                 'libs/vendor/npm/requirejs-text/text',
+      underscore:           'libs/vendor/npm/underscore/underscore',
+      backbone:             'libs/vendor/npm/backbone/backbone',
+      'promise-polyfill':   'libs/vendor/bower/promise-polyfill/Promise.min',
+
+      // Three.js
+      three:                'libs/vendor/bower/threejs/build/three.min',
+
+      // WebVR
+      'vr-controls':        'libs/vendor/bower/threejs/examples/js/controls/VRControls',
+      'vr-effect':          'libs/vendor/bower/threejs/examples/js/effects/VREffect',
+      'vr-polyfill':        'libs/vendor/bower/webvr-polyfill/build/webvr-polyfill',
+      'vr-manager':         'libs/vendor/bower/webvr-boilerplate/build/webvr-manager',
 
       // Native modules
-      util:                 'libs/native/util/util'
+      util:                 'libs/native/Util/Util',
+      axes:                 'libs/native/Axes/Axes',
+      main:                 'libs/native/Main/Main'
     },
     shim: {
+      'vr-polyfill': {
+        deps: ['three']
+      },
+      'vr-controls': {
+        deps: ['three']
+      },
+      'vr-effect': {
+        deps: ['three']
+      },
+      'vr-manager': {
+        deps: ['three']
+      },
+      'three': {
+        deps: []
+      }
     }
   });
 
