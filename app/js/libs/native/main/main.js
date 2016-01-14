@@ -6,6 +6,7 @@ define([
   'axes',
   'promise-polyfill',
   'three',
+  'three.trackballcontrols',
   'vr-controls',
   'vr-effect',
   'vr-polyfill',
@@ -87,28 +88,22 @@ define([
         // Apply VR headset positional data to camera.
         this.vrcontrols = new THREE.VRControls(this.camera);
 
+        // Initialize non-VR controls
+        this.controls = new THREE.TrackballControls(this.camera);
+        this.controls.rotateSpeed = 1.0;
+        this.controls.zoomSpeed = 0.2;
+        this.controls.panSpeed = 0.8;
+        this.controls.noZoom = false;
+        this.controls.noPan = false;
+        this.controls.staticMoving = true;
+        this.controls.dynamicDampingFactor = 0.3;
+
         // Apply VR stereo rendering to renderer.
         this.vreffect = new THREE.VREffect(this.renderer);
         this.vreffect.setSize(win_w, win_h);
 
-        // Create a VR manager helper to enter and exit VR mode.
-        this.manager = new WebVRManager(this.renderer, this.vreffect, {
-          hideButton: false,
-          isUndistorted: false
-        });
-
         // Enable debugging axis lines
         if (options.axes) {
-
-          // Initialize controls
-          //this.controls = new THREE.TrackballControls(this.camera);
-          //this.controls.rotateSpeed = 1.0;
-          //this.controls.zoomSpeed = 0.2;
-          //this.controls.panSpeed = 0.8;
-          //this.controls.noZoom = false;
-          //this.controls.noPan = false;
-          //this.controls.staticMoving = true;
-          //this.controls.dynamicDampingFactor = 0.3;
 
           // Build graph lines
           var lines = Axes.drawAxesGraphLines(axes_radius, 0);
@@ -118,6 +113,12 @@ define([
           var axes = Axes.drawAxes(axes_radius);
           this.scene.add(axes);
         }
+
+        // Create a VR manager helper to enter and exit VR mode.
+        this.manager = new WebVRManager(this.renderer, this.vreffect, {
+          hideButton: false,
+          isUndistorted: false
+        });
 
         // Begin rendering
         this.render();
@@ -129,6 +130,7 @@ define([
       render: function() {
         requestAnimationFrame(main.render);
         main.vrcontrols.update();
+        main.controls.update();
         main.manager.render(main.scene, main.camera);
       }
     };
