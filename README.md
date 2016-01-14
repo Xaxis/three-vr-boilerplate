@@ -4,14 +4,17 @@
 
 Scaffolding for rapidly building Three.js/WebVR based applications.
 
+Recently while experimenting with Three.js and WebVR (using [webvr-boilerplate](https://github.com/borismus/webvr-boilerplate)) I realized I 
+needed a faster way to get started developing. One day WebVR applications will be more than fun demos. They will be 
+major applications that sit upon modern MVC architectures requiring sophisticated dependency management. This project is
+an attempt at answering that problem.
+
 ## Features
 
 * Prescriptive yet flexible (scalable) directory structure scaffolding
 * webvr-boilerplate and Three.js integration
 * Require.js integration/module template example
 * Backbone MVC module pattern/module template example
-* Backbone router integration and template example
-* Cleanly organized SASS structure
 * Grunt automation and SASS compilation
 
 ## Author

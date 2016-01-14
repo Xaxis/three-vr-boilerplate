@@ -3,7 +3,6 @@
  */
 define([
   'underscore',
-  'jquery',
   'axes',
   'promise-polyfill',
   'three',
@@ -11,7 +10,7 @@ define([
   'vr-effect',
   'vr-polyfill',
   'vr-manager'
-], function(_, $, Axes) {
+], function(_, Axes) {
   var Main = function() {
     var main = {
 
@@ -24,7 +23,7 @@ define([
         var
           win_w             = window.innerWidth,
           win_h             = window.innerHeight,
-          view_angle        = 60,
+          view_angle        = 75,
           aspect            = win_w / win_h,
           near              = 0.00001,
           far               = 10000,

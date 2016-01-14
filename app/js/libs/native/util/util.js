@@ -7,7 +7,6 @@ define([
 ], function($, _) {
   var Util = function() {
     return {
-
     };
   };
 
