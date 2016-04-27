@@ -15,18 +15,18 @@
       text:                             'libs/vendor/npm/requirejs-text/text',
       underscore:                       'libs/vendor/npm/underscore/underscore',
       backbone:                         'libs/vendor/npm/backbone/backbone',
-      'promise-polyfill':               'libs/vendor/bower/promise-polyfill/Promise.min',
+      'promise-polyfill':               'libs/vendor/npm/es6-promise/dist/es6-promise.min',
 
       // Three.js
-      three:                            'libs/vendor/bower/threejs/build/three.min',
-      'three.orbitcontrols':            'libs/vendor/bower/threejs/examples/js/controls/OrbitControls',
-      'three.trackballcontrols':        'libs/vendor/bower/threejs/examples/js/controls/TrackballControls',
+      three:                            'libs/vendor/npm/three/three.min',
+      'three.orbitcontrols':            'libs/vendor/npm/three/examples/js/controls/OrbitControls',
+      'three.trackballcontrols':        'libs/vendor/npm/three/examples/js/controls/TrackballControls',
 
       // WebVR
-      'vr-controls':                    'libs/vendor/bower/threejs/examples/js/controls/VRControls',
-      'vr-effect':                      'libs/vendor/bower/threejs/examples/js/effects/VREffect',
-      'vr-polyfill':                    'libs/vendor/bower/webvr-polyfill/build/webvr-polyfill',
-      'vr-manager':                     'libs/vendor/bower/webvr-boilerplate/build/webvr-manager',
+      'vr-controls':                    'libs/vendor/npm/three/examples/js/controls/VRControls',
+      'vr-effect':                      'libs/vendor/npm/three/examples/js/effects/VREffect',
+      'vr-polyfill':                    'libs/vendor/npm/webvr-polyfill/build/webvr-polyfill',
+      'vr-manager':                     'libs/vendor/npm/webvr-boilerplate/build/webvr-manager',
 
       // Native modules
       util:                             'libs/native/Util/Util',
