@@ -9,7 +9,7 @@ define([
   'three.trackballcontrols',
   'vr-controls',
   'vr-effect',
-  //'vr-polyfill',
+  'vr-polyfill',
   'vr-manager'
 ], function(_, Axes) {
   var Main = function() {
@@ -178,6 +178,7 @@ define([
        * Last render timestamp
        */
       lastRender: 0,
+
 
       /**
        * Rendering loop.
