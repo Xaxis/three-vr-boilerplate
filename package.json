@@ -21,8 +21,10 @@
     "jquery": "^2.1.4",
     "lodash": "^4.0.0",
     "modernizr": "^3.0.0-alpha.4",
+    "promise-polyfill": "^4.0.4",
     "requirejs": "^2.1.19",
     "requirejs-text": "^2.0.12",
+    "three-js": "^75.0.1",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
