@@ -19,7 +19,7 @@
   "dependencies": {
     "backbone": "^1.2.1",
     "es6-promise": "^3.1.2",
-    "jquery": "^2.1.4",
+    "jquery": "^3.5.0",
     "modernizr": "^3.0.0-alpha.4",
     "promise-polyfill": "^4.0.4",
     "requirejs": "^2.1.19",
